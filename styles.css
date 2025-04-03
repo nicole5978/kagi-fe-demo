@@ -111,8 +111,7 @@ h4 {
   display: none;
 }
 
-/* Handle hiding labels by checking if there is an 11th child */
-.card-content:not(:has(ul.card-body li:nth-child(11), p.card-body))
-  .toggle-labels {
+/* Handle showing labels by checking if there is an 11th child, exclude <p> from check */
+.card-content:not(:has(ul.card-body li:nth-child(11), p.card-body)) .toggle-labels {
   display: none;
 }
