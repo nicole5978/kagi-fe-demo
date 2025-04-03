@@ -62,18 +62,16 @@ h3 {
   padding: 0;
 }
 
-.card-li-content,
-.card-p-content {
+.card-content {
   display: flex;
   flex-direction: column-reverse;
   gap: var(--spacing-sm);
 }
 
-.card-body,
 .card-body {
   line-height: var(--line-height);
   max-height: calc(var(--max-lines) * var(--line-height));
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .expand-toggle {
@@ -91,7 +89,6 @@ h3 {
 }
 
 /* Remove height limit if toggle is checked */
-.expand-toggle:checked ~ .card-body,
 .expand-toggle:checked ~ .card-body {
   max-height: none;
 }
@@ -102,7 +99,8 @@ h3 {
   display: none;
 }
 
-/* Handle hiding list overflow by checking if there is an 11th child*/
-.card-li-content:not(:has(ul.card-body li:nth-child(11))) .toggle-labels {
+/* Handle hiding labels by checking if there is an 11th child */
+.card-content:not(:has(ul.card-body li:nth-child(11), p.card-body))
+  .toggle-labels {
   display: none;
 }
