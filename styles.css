@@ -26,7 +26,7 @@ body {
 }
 
 section {
-  max-width: 75%;
+  max-width: 95%;
 }
 
 h1 {
@@ -76,7 +76,7 @@ h4 {
 
 .card-content {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: var(--spacing-sm);
 }
 
@@ -87,31 +87,30 @@ h4 {
 }
 
 .expand-toggle {
-  display: none;
+  appearance: none;
+  align-self: center;
 }
 
-.toggle-labels {
-  display: flex;
-  justify-content: center;
-  padding-top: var(--spacing-sm);
+.expand-toggle::before {
+  content: "Show More";
 }
 
-.toggle-labels label {
-  cursor: pointer;
+.expand-toggle:checked::before {
+  content: "Show Less";
 }
 
 /* Remove height limit if toggle is checked */
-.expand-toggle:checked ~ .card-body {
+.card-content:has(.expand-toggle:checked) .card-body {
   max-height: none;
 }
 
-/* Adjust label visibility whether expanded or not */
+/* Adjust toggle visibility whether expanded or not */
 .expand-toggle:checked ~ .toggle-labels .show-more,
 .expand-toggle:not(:checked) ~ .toggle-labels .show-less {
   display: none;
 }
 
-/* Handle showing labels by checking if there is an 11th child, exclude <p> from check */
-.card-content:not(:has(ul.card-body li:nth-child(11), p.card-body)) .toggle-labels {
+/* Handle showing toggle by checking if there is an 11th child, exclude <p> from check */
+.card-content:not(:has(ul.card-body li:nth-child(11), p.card-body)) .expand-toggle {
   display: none;
 }
