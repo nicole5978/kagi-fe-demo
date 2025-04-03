@@ -1,5 +1,7 @@
 # Kagi FE Demo Project
 
+[Live Preview](https://nicole5978.github.io/kagi-fe-demo/)
+
 ## Task 1
 
 Create a recipe widget that conditionally shows "Show More/Less" toggle depending on whether the number of ingredients exceed 10. The toggle should expand and collapse the card without any JavaScript.
