@@ -11,11 +11,13 @@
 </head>
 
 <body>
-  <h1>Kagi FE Demo Project</h1>
+  <header>
+    <h1>Kagi FE Demo Project</h1>
+  </header>
   <section>
     <h2>Task 1 - HTML Recipes</h2>
     <div class="cards">
-      <div class="card">
+      <article class="card">
         <h3>Meat Lasagna Recipe</h3>
         <div class="card-content">
           <ul class="card-body">
@@ -62,9 +64,9 @@
           </ul>
           <input type="checkbox" id="recipe-1-toggle" class="expand-toggle" aria-label="Toggle details">
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Meat Lasagna Recipe</h3>
         <div class="card-content">
           <ul class="card-body">
@@ -134,7 +136,7 @@
             </li>
             <li>
               <input type="checkbox" id="recipe2-ingredient17">
-              <label for="recipe2-ingredient17">16 ricotta cheese</label>
+              <label for="recipe2-ingredient17">16 ounces ricotta cheese</label>
             </li>
             <li>
               <input type="checkbox" id="recipe2-ingredient18">
@@ -155,9 +157,9 @@
           </ul>
           <input type="checkbox" id="recipe-2-toggle" class="expand-toggle" aria-label="Toggle details">
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Some of My Thoughts</h3>
 
         <div class="card-content">
@@ -172,9 +174,10 @@
           </p>
           <input type="checkbox" id="thoughts-toggle" class="expand-toggle" aria-label="Toggle details">
         </div>
-      </div>
+      </article>
     </div>
   </section>
+  <script src="optimization.js"></script>
 </body>
 
 </html>
