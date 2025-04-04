@@ -43,6 +43,17 @@ For benchmarking, I created the function `benchmark()` that evaluates an array o
 
 I began by splitting `others` into `peopleArr`, concatenating `name` to `peopleArr` and sorting `peopleArr`. After this, I found the index of `name` and use its `index + 1` to calculate the time waiting based on the number of judges.
 
+```js
+function court(name, judges, others) {
+  const peopleArr = others.split(" ").concat(name).sort()
+
+  const index = peopleArr.indexOf(name)
+
+  // Calculate time by index position, # judges, and wait time
+  return Math.ceil((index + 1) / judges) * 30
+}
+```
+
 ##### Test Results
 
     Benchmark Results:

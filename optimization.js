@@ -1,14 +1,3 @@
-// First implementation
-// function court(name, judges, others) {
-//   const peopleArr = others.split(" ").concat(name).sort()
-
-//   const index = peopleArr.indexOf(name)
-
-//   // Calculate time by index position and # judges
-//   return Math.ceil((index + 1) / judges) * 30
-// }
-
-// Second implementation
 function court(name, judges, others) {
   const peopleArr = others.split(" ")
   let position = 1
