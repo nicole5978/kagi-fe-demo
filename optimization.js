@@ -20,8 +20,8 @@ function court(name, judges, others) {
     }
   }
 
-  // Calculate time by index position and # judges
-  return Math.ceil(position / judges) * 3
+  // Calculate time by index position, # judges, and wait time
+  return Math.ceil(position / judges) * 30
 }
 
 function benchmark() {
